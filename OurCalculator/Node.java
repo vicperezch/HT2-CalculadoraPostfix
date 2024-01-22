@@ -8,6 +8,7 @@ public class Node<T> {
     private T value;
     private Node<T> next;
 
+
     /**
      * Constructor de clase
      * @param value Valor que almacena el nodo
@@ -17,6 +18,7 @@ public class Node<T> {
         next = null;
     }
 
+
     /**
      * Getter
      * @return Valor que almacena el nodo
@@ -24,6 +26,7 @@ public class Node<T> {
     public T getValue() {
         return value;
     }
+
 
     /**
      * Setter
@@ -33,6 +36,7 @@ public class Node<T> {
         this.value = value;
     }
 
+
     /**
      * Getter
      * @return Siguiente nodo en la pila
@@ -41,6 +45,7 @@ public class Node<T> {
         return next;
     }
 
+    
     /**
      * Setter
      * @param next Nuevo nodo al cual apuntar

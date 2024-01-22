@@ -8,6 +8,7 @@ public class CustomStack<T> {
     private Node<T> firstNode;
     private Node<T> lastNode;
 
+    
     /**
      * Agrega un nuevo dato a la pila
      * @param value Valor a añadir
