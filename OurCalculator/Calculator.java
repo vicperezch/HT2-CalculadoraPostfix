@@ -4,8 +4,6 @@
  * @since 20/01/24
  * Clase calculadora que lleva a cabo operaciones aritméticas básicas
  */
-
-
 public class Calculator {
 
     /**
