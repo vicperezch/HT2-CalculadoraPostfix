@@ -1,3 +1,4 @@
+package tests;
 /**
  * @author Nils Muralles & Víctor Pérez
  * @version 1.0.0
@@ -7,6 +8,8 @@
 
 import static org.junit.Assert.*;
 import org.junit.*;
+
+import src.Calculator;
 
 public class CalculatorTest {
     

@@ -1,3 +1,5 @@
+package src;
+
 /**
  * @author Nils Muralles & Víctor Pérez
  * @version 1.0.0

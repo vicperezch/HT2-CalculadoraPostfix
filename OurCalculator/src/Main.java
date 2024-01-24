@@ -1,3 +1,5 @@
+package src;
+
 /**
  * @author Nils Muralles & Víctor Pérez
  * @version 1.0.0
@@ -22,9 +24,9 @@ public class Main {
 
                 switch (op) {
                     case 1:
-                        Posfix posfixOperation = new Posfix();
+                        Postfix posfixOperation = new Postfix();
                         System.out.println("\nOperación dada: " + posfixOperation.readOperation());
-                        System.out.println("Resultado: " + posfixOperation.posfixOperate());
+                        System.out.println("Resultado: " + posfixOperation.postfixOperate());
                         break;
                 
                     case 2:

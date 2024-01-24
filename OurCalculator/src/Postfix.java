@@ -1,3 +1,4 @@
+package src;
 /**
  * @author Nils Muralles & Víctor Pérez
  * @version 1.0.0
@@ -10,13 +11,13 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Posfix {
+public class Postfix {
     private File posfixFile;
 
     /**
      * Constructor de la clase Posfix, inicializa con archivo llamado "datos.txt"
      */
-    public Posfix() {
+    public Postfix() {
         this.posfixFile = new File("datos.txt");
     }
 
@@ -49,7 +50,7 @@ public class Posfix {
      * Realiza los cálculos de acuerdo con el paradigma Posfix
      * @return Resultado de los cálculos
      */
-    public String posfixOperate() {
+    public String postfixOperate() {
         // Stack de strings sobre el que se trabaja, calculadora y elementos de la operación dada
         CustomStack<String> stack = new CustomStack<>();
         Calculator myCalc = new Calculator();
