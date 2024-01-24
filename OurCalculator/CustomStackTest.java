@@ -1,8 +1,5 @@
-package tests;
 import static org.junit.Assert.*;
 import org.junit.*;
-
-import src.CustomStack;
 
 /**
  * @author Nils Muralles & Víctor Pérez

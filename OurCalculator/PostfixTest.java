@@ -1,8 +1,5 @@
-package tests;
-
 import static org.junit.Assert.*;
 import org.junit.*;
-import src.Postfix;
 
 /**
  * @author Nils Muralles & Víctor Pérez
