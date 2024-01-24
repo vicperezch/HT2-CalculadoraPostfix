@@ -12,7 +12,7 @@ public class Main {
         boolean menu = true;
 
         while (menu) { 
-            System.out.println("\n---CALCULADORA POSFIX---");
+            System.out.println("\n---CALCULADORA POSTFIX---");
             System.out.println("1. Leer archivo\n2. Salir");
             System.out.print("Seleccione una opción: ");
             String option = input.nextLine();
@@ -23,8 +23,8 @@ public class Main {
                 switch (op) {
                     case 1:
                         Posfix posfixOperation = new Posfix();
-                        System.out.println("Operación dada: " + posfixOperation.readOperation());
-                        System.out.println("Rsultado: " + posfixOperation.posfixOperate());
+                        System.out.println("\nOperación dada: " + posfixOperation.readOperation());
+                        System.out.println("Resultado: " + posfixOperation.posfixOperate());
                         break;
                 
                     case 2:

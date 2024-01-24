@@ -14,10 +14,10 @@ public class Posfix {
     private File posfixFile;
 
     /**
-     * Constructor de la clase Posfix, inicializa con archivo llamado "archivo.txt"
+     * Constructor de la clase Posfix, inicializa con archivo llamado "datos.txt"
      */
     public Posfix() {
-        this.posfixFile = new File("archivo.txt");
+        this.posfixFile = new File("datos.txt");
     }
 
     /**
@@ -41,7 +41,7 @@ public class Posfix {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        
+
         return operation;
     }
 
@@ -54,19 +54,23 @@ public class Posfix {
         CustomStack<String> stack = new CustomStack<>();
         Calculator myCalc = new Calculator();
         String[] elements = readOperation().split(" ");
-
-        // Llena el Stack de izquierda a derecha
-        for (int i = elements.length-1; i >=0; i--) {
-            stack.push(elements[i]);
-        }
     
         // Itera sobre los elementos proporcionados 
         for (int i = 0; i < elements.length; i++) {
+
             if (!Character.isDigit(elements[i].charAt(0))) { // Si el elemento es un operador
-                int operatorA = Integer.parseInt(stack.pop()); // Toma los dos primeros números
-                int operatorB = Integer.parseInt(stack.pop());
-                int result = myCalc.calculate(elements[i].charAt(0), operatorA, operatorB); // Reliza la operación con dicho elemento
-                stack.push(String.valueOf(result)); // Inserta el resultado en el Stack
+
+                try {
+                    Integer operatorA = Integer.parseInt(stack.pop()); // Toma los dos primeros números
+                    Integer operatorB = Integer.parseInt(stack.pop());
+
+                    int result = myCalc.calculate(elements[i].charAt(0), operatorB, operatorA); // Reliza la operación con dicho elemento
+                    stack.push(String.valueOf(result)); // Inserta el resultado en el Stack
+                    
+                // Si parseInt lanza una excepción significa que no hay operadores suficientes
+                } catch (NumberFormatException e) {
+                    return "La expresión no es válida";
+                }
 
             } else { // Si no es un operador
                 stack.push(elements[i]); // Inserta únicamente el elemento
